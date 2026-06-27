@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Micron Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Micron Analyzer</h1>
+    <p class="subtitle">Jednoduchý přehled ceny akcie MU, grafu a klouzavého průměru.</p>
+
+    <div class="controls">
+      <button onclick="setRange('1M')">1 měsíc</button>
+      <button onclick="setRange('6M')">6 měsíců</button>
+      <button onclick="setRange('1Y')">1 rok</button>
+      <button onclick="setRange('5Y')">5 let</button>
+      <button onclick="setRange('MAX')">Vše</button>
+    </div>
+
+    <div class="card">
+      <div id="status">Načítám data...</div>
+      <div id="signal"></div>
+    </div>
+
+    <div id="chart" class="chart"></div>
+
+    <p class="note">
+      Poznámka: Toto je orientační nástroj, ne investiční doporučení.
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
